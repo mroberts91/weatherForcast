@@ -112,7 +112,7 @@ def temp_graph():
 	def wind_speed():
 		day = 0
 		windList = []
-		for x in range(7):
+		for x in range(5):
 			wind = json_object['list'][day]['wind']['speed']
 			windList.append(wind)
 			day += 1
@@ -125,13 +125,20 @@ def temp_graph():
 	# Render the temp graph
 	graph = pygal.Bar()
 	graph.title = "7 Day Temperature Forcast"
-	graph.x_labels = map(str, range(1, 8))
+	graph.x_labels = map(str, range(1, 6))
 	graph.add('High Temp', highs)
 	graph.add('Low Temp', lows)
 	graph.add('Wind (km/h)', wind)
 	graph.render()
 	graph_data = graph.render_data_uri()
 	return render_template('graph.html', zipcode=zipcode, city=name, country=country, graph_data=graph_data)
+
+@app.errorhandler(KeyError)
+@app.errorhandler(400)
+@app.errorhandler(500)
+@app.errorhandler(404)
+def runtime_error(e):
+	return render_template('error.html', error=str(e))
 
 if __name__ == '__main__':
     app.run()
