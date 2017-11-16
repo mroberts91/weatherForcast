@@ -1,0 +1,319 @@
+body{
+  background-color: white;
+}
+
+/*----------------------------------------*/
+/* CSS Gird for app header */
+.headwrapper{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 10px;
+  grid-auto-rows: minmax(100px, auto);
+  background-color: #dedede;
+  border-radius: 2px;
+}
+
+#headerleft{
+  margin-left: 15%;
+}
+
+#home-button{
+  margin: 30px 0px 0px 40px;
+  height: 40px;
+  width: 40px;
+}
+#home-button:hover{
+  height: 38px;
+  width: 38px;
+}
+
+#headerright{
+  margin-right: 15%;
+}
+
+#header{
+  text-align: center;
+}
+
+/*----------------------------------------*/
+/* Index Grid*/
+
+.wrapper {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 20px;
+  grid-auto-rows: minmax(100px, auto);
+  margin: 100px 5% 200px 5%;
+}
+
+.butt:hover{
+  height: 105%;
+  width: 105%;
+  margin: 2%;
+  padding-right: 2%
+}
+.butt{
+  border-radius: 3px
+
+}
+
+/*.butt:hover{
+  height: 225px;
+  width: 225px;
+}
+*/
+#one {
+  grid-column: 1;
+  grid-row: 1 / 4;
+  background-color: #dedede;
+}
+
+#one img{
+  display: block;
+  margin: 27% 10% 0px 16%;
+}
+#two { 
+  grid-column: 2;
+  grid-row: 1 / 4;
+  background-color: #dedede;
+}
+
+#two img{
+  max-height: 100px;
+  max-width: 200px;
+  display: block;
+  margin: 30% 10% 0px 25%;
+  opacity: 80%;
+}
+
+#three {
+  grid-column: 3;
+  grid-row: 1 / 4;
+  background-color: #dedede;
+}
+
+#three img{
+  display: block;
+  margin: 27% 10% 0px 16%;
+}
+
+/*----------------------------------*/
+/*Temperature Form Page*/
+.temp-wrapper{
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  grid-gap: 10px;
+  grid-auto-rows: minmax(100px, auto);
+  margin: 30px 20px 0px 20px;
+}
+
+#temp-gutter-left{
+  grid-column: 1;
+  grid-row: 1 / 4;
+}
+
+#temp-form{
+  grid-column: 2 / 6;
+  grid-row: 1 / 4;;
+}
+
+.entry {
+  margin: auto;
+  width: 75%;
+  padding: 0 10px 10px 10px;
+  text-align: center;
+  font-size: 150%;
+}
+
+.entry h1{
+  color: #F4F0F0;
+  padding-top: 0;
+  background-color: #4F4D4D;
+  border-radius: 5px
+}
+.entry label{
+  margin: 10px 0 40px 0;
+  font-size: 150%
+}
+.entry input[type=text]{
+  width: 250px;
+  height: 30px;
+  border: 0 none;
+  margin-right: 15px;
+  font-size: 90%;
+  background-color: #dedede;
+
+}
+
+.entry input[type=text]:focus{
+  background-color: #F7E676;
+  font-size: 90%;
+}
+.entry input[type=submit] {
+  width: 150px;
+  height: 30px;
+  background-color: #232222;
+  color: white;
+  border: 0 none;
+
+}
+
+.entry input[type=submit]:hover{
+  height: 28px;
+  width: 145px;
+}
+#temp-gutter-right{
+  grid-column: 6;
+  grid-row: 1 / 4;
+}
+
+/*----------------------------------*/
+/* Temperature Output Page*/
+.temp-output-wrapper{
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  grid-gap: 10px;
+  grid-auto-rows: minmax(100px, auto);
+  margin: 50px 20px 15px 20px;
+}
+
+#temp-output-gutter-left{
+  grid-column: 1;
+  grid-row: 1 / 4;
+}
+
+#name{
+  grid-column: 2 / 6;
+  grid-row: 1 / 4;
+  background-color: #dedede;
+  border-radius: 5px;
+
+}
+
+.city {
+  color: #121212;
+  margin: auto;
+  width: 75%;
+  padding: 10px;
+  text-align: center;
+  font-size: 150%
+}
+
+.title{
+  color: #4D4242;
+}
+
+.nobr{
+  display: inline
+}
+
+#temp-output-gutter-right{
+  grid-column: 6;
+  grid-row: 1 / 4;
+}
+
+/*----------------------------------*/
+/* Forcast Form Page*/
+.forcast-wrapper{
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  grid-gap: 10px;
+  grid-auto-rows: minmax(100px, auto);
+  margin: 30px 20px 0px 20px;
+}
+
+#forcast-gutter-left{
+  grid-column: 1;
+  grid-row: 1 / 4;
+}
+
+#forcast-form{
+  grid-column: 2 / 6;
+  grid-row: 1 / 4;
+}
+
+#forcast-gutter-right{
+  grid-column: 6;
+  grid-row: 1 / 4;
+}
+
+/*----------------------------------*/
+/* Grapgh Page*/
+
+/* Graph Subheader*/
+.subhead-wrapper{
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  grid-gap: 10px;
+  grid-auto-rows: minmax(100px, auto);
+  margin: 20px 0px 10px 0px
+}
+#subhead-gutter-left{
+  grid-column: 1;
+  grid-row: 1;
+}
+
+#subhead-center{
+  grid-column: 2 / 6;
+  grid-row: 1;
+  background-color: #dedede;
+  border-radius: 5px;
+}
+
+#subhead-gutter-right{
+  grid-column: 6;
+  grid-row: 1;
+}
+/* Grapgh Body*/
+.graph-wrapper{
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  grid-gap: 10px;
+  grid-auto-rows: minmax(200px, auto);
+  margin: 10px 0px 0px 0px
+
+}
+#graph-gutter-left{
+  grid-column: 1;
+  grid-row: 1 / 5;
+  /*background-color: #dedede;*/
+}
+
+#graph-body-center{
+  grid-column: 2 / 6;
+  grid-row: 1 / 5;
+  margin-left: 90px;
+  max-height: 700px;
+  max-width: 700px;
+}
+#graph{
+  margin: auto;
+  width: 100%;
+  padding: 10px;
+  text-align: center;
+}
+
+#graph-image{
+  margin-left: 17%;
+  border: 1px solid #282828;
+}
+
+#graph-gutter-right{
+  grid-column: 6;
+  grid-row: 1 / 5;
+  /*background-color: #dedede;*/
+}
+
+/*----------------------------------*/
+
+/*----------------------------------*/
+/* Footer */
+#footer-left{
+  float: left;
+  margin: 10px 0px 50px 2%;
+}
+
+#footer-right {
+  float: right;
+  margin : 10px 2% 50px 0px ;
+}

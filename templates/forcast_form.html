@@ -1,0 +1,32 @@
+{% extends "layout.html" %}
+{% block title %}Robertson Development{% endblock %}
+{% block head %}
+  {{ super() }}
+
+{% endblock %}
+    {% block header %}
+      {{ super() }}
+    {% endblock%}
+    {% block content %}
+      {{ super() }}
+      <div class="forcast-wrapper">
+      	<div id="forcast-gutter-left"></div>
+      	<div id="forcast-form">
+          <div class="entry">
+            <h1> 5 Day Forcast</h1>
+        		<form method="POST">
+              {{form.hidden_tag()}}
+              <p>
+          			{{ form.zipcode.label }}<br><br>
+                {{ form.zipcode() }} {% for error in form.zipcode.errors %}[{{ error }}]{% endfor %}
+          			{{ form.submit() }}
+              </p>
+        		</form>
+          </div>
+      	</div>
+      	<div id="forcast-gutter-right"></div>
+      </div>
+    {% endblock %}
+    {% block footer %}
+      {{ super() }}
+    {% endblock %}

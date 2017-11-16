@@ -1,0 +1,32 @@
+{% extends "layout.html" %}
+{% block title %}Robertson Development{% endblock %}
+{% block head %}
+  {{ super() }}
+
+{% endblock %}
+{% block header %}
+  {{ super() }}
+{% endblock%}
+{% block content %}
+  {{ super() }}
+  <div class="wrapper">
+  <div class="butt" id="one">
+    <a href="{{ url_for('temp_form') }}">
+      <img src="{{ url_for('static', filename='Temperature.jpg') }}">
+    </a>
+  </div>
+  <div class="butt" id="two">
+    <a href="https://github.com/mroberts91" target="_blank">
+      <img src="{{ url_for('static', filename='github.png') }}">
+    </a>
+  </div>
+  <div class="butt" id="three">
+    <a href="{{ url_for('forcast_form') }}">
+      <img src="{{ url_for('static', filename='five_day.jpg') }}">
+    </a>
+  </div>
+  </div>
+{% endblock %}
+{% block footer %}
+  {{ super() }}
+{% endblock %}

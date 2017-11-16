@@ -1,0 +1,26 @@
+{% extends "layout.html" %}
+{% block title %}Robertson Development{% endblock %}
+{% block head %}
+  {{ super() }}
+
+{% endblock %}
+    {% block header %}
+      {{ super() }}
+    {% endblock%}
+    {% block content %}
+      {{ super() }}
+      <div class="temp-output-wrapper">
+      	<div id="temp-output-gutter-left"></div>
+        <div id="name">
+          <div class="city">
+          	<h1><span class="title">Zip Code:</span>&nbsp;&nbsp;&nbsp; {{zipcode}}</h1>
+            <h1><span class="title">City:</span>&nbsp;&nbsp;&nbsp; {{name}}, {{country}}</h1>
+            <h1><span class="title">Current Temp:</span>&nbsp;&nbsp;&nbsp; {{temp}} degrees</h1>
+          </div>
+        </div>
+        <div id="temp-output-gutter-right"></div>
+      </div>
+    {% endblock %}
+  	{% block footer %}
+  		{{ super() }}
+	{% endblock %}

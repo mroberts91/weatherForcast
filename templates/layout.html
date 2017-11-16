@@ -1,0 +1,35 @@
+<!doctype html>
+<html>
+  <head>
+    {% block head %}
+    <link rel="shortcut icon" href="{{ url_for('static', filename='favicon.png') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <title>{% block title %}Robertson Development{% endblock %}</title>
+    {% endblock %}
+  </head>
+  <body>
+    {% block header %}
+    <div class="headwrapper">
+      <div id="headleft">
+        <a href="{{url_for('index') }}">
+          <img id="home-button" src="{{ url_for('static', filename='home.png') }}">
+        </a>
+      </div>
+      <div id="header">
+        <img src="{{ url_for('static', filename='header.jpg') }}">
+      </div>
+      <div id="headright">
+      </div>
+    </div>
+    {% endblock%}
+    <div id="content">{% block content %}{% endblock %}</div>
+    {% block footer %}
+      <div id="footer-left">
+        <p>All raw weather data provided by Open Weather Map API</p>
+      </div>
+      <div id="footer-right">
+      &copy; Robertson Development -- Check out the Source code on our <a href="https://github.com/mroberts91" target="_blank">GitHub</a>.
+      </div>
+    {% endblock %}
+  </body>
+</html>

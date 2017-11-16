@@ -1,0 +1,13 @@
+WEATHER WEB APP project
+________________________
+
+Create index.html
+Create the display page following the request
+Obviously use some css magic
+study on the usage of FLASK framework
+study python get requests /  requests lib
+obtained Open Weather map api key located in apiKeys dir
+obtain hosting service
+have weather web app live online
+make this look professional
+
