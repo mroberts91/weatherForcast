@@ -1,6 +1,6 @@
 #!env\Scripts python.exe
 
-from flask import Flask, render_template, request, url_for, redirect, session
+from flask import Flask, render_template, url_for, redirect, session
 import pygal
 from flask_wtf import Form
 from wtforms.fields import StringField, SubmitField
@@ -167,6 +167,10 @@ def temp_graph():
 # Display the error that occured
 # error HTML also has the layout.html extension
 @app.errorhandler(KeyError)
+def key_error(e):
+	zipcode = session['zipcode']
+	error = zipcode + " is not a valid US Zip Code"
+	return render_template('error.html', error=error)
 @app.errorhandler(400)
 @app.errorhandler(500)
 @app.errorhandler(404)
