@@ -1,0 +1,28 @@
+{% extends "layout.html" %}
+{% block title %}Robertson Development{% endblock %}
+{% block head %}
+  {{ super() }}
+  <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='lookup.css') }}">
+
+{% endblock %}
+{% block header %}
+  {{ super() }}
+{% endblock%}
+{% block content %}
+  {{ super() }}
+  <div id="Look_up_form">
+    <form method="POST">
+        {{form.hidden_tag()}}
+        <p class="labels">
+            {{ form.cityName.label }}&nbsp;&nbsp;&nbsp;{{form.cityName() }}<br><br>
+            {{form.stateName.label }}&nbsp;&nbsp;{{ form.stateName() }}<br><br>
+            {{ form.submit() }}
+        </p>
+
+    </form>
+  </div>
+    {{table|safe}}
+{% endblock %}
+{% block footer %}
+  {{ super() }}
+{% endblock %}

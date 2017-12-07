@@ -1,7 +1,8 @@
-body{
-  background-color: white;
-}
-
+body            { font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;}
+a, h1, h2       { color: #377ba8; }
+h1, h2          { margin: 0; }
+h1              { border-bottom: 2px solid #eee; }
+h2              { font-size: 1.2em; }
 /*----------------------------------------*/
 /* CSS Gird for app header */
 .headwrapper{
@@ -13,6 +14,14 @@ body{
   border-radius: 2px;
 }
 
+.button {
+  width: 150px;
+  height: 30px;
+  background-color: #232222;
+  color: white;
+  border: 0 none;
+  font-size: 110%
+}
 #headerleft{
   margin-left: 15%;
 }
@@ -65,17 +74,16 @@ body{
 #one {
   grid-column: 1;
   grid-row: 1 / 4;
-  background-color: #dedede;
 }
 
 #one img{
   display: block;
   margin: 27% 10% 0px 16%;
+  border: solid .5px black;
 }
-#two { 
+#two {
   grid-column: 2;
   grid-row: 1 / 4;
-  background-color: #dedede;
 }
 
 #two img{
@@ -84,17 +92,18 @@ body{
   display: block;
   margin: 30% 10% 0px 25%;
   opacity: 80%;
+  border: solid .5px black;
 }
 
 #three {
   grid-column: 3;
   grid-row: 1 / 4;
-  background-color: #dedede;
 }
 
 #three img{
   display: block;
   margin: 27% 10% 0px 16%;
+  border: solid .5px black;
 }
 
 /*----------------------------------*/
