@@ -65,7 +65,7 @@ def temp_form():
 def temp_output():
     zipcode = session['zipcode']
     # Calling the OWM API and getting the JSON response from the API
-    response = requests.get('http://api.openweathermap.org/data/2.5/weather?zip=' + zipcode + '&APPID=bf226275d913f1c0881e2da6d71359da')
+    response = requests.get('http://api.openweathermap.org/data/2.5/weather?zip=' + zipcode + '&APPID=API_KEY')
     # Declaring the json object as the response of the API call in JSON format
     json_object = response.json()
 
@@ -105,7 +105,7 @@ def forcast_form():
 def temp_graph():
     zipcode = session['zipcode']
     # Call the API using the user input on the forcast_form template
-    response = requests.get('http://api.openweathermap.org/data/2.5/forecast?zip=' + zipcode + '&APPID=bf226275d913f1c0881e2da6d71359da')
+    response = requests.get('http://api.openweathermap.org/data/2.5/forecast?zip=' + zipcode + '&APPID=API_KEY')
     # The response in the JSON returned by the API call
     json_object = response.json()
     # Name is the JSON objext associated with the city/town name

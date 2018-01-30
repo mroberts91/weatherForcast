@@ -80,6 +80,7 @@ h2              { font-size: 1.2em; }
   display: block;
   margin: 27% 10% 0px 16%;
   border: solid .5px black;
+  border-radius: 4px
 }
 #two {
   grid-column: 2;
@@ -93,6 +94,7 @@ h2              { font-size: 1.2em; }
   margin: 30% 10% 0px 25%;
   opacity: 80%;
   border: solid .5px black;
+  border-radius: 4px
 }
 
 #three {
@@ -104,6 +106,7 @@ h2              { font-size: 1.2em; }
   display: block;
   margin: 27% 10% 0px 16%;
   border: solid .5px black;
+  border-radius: 4px
 }
 
 /*----------------------------------*/
